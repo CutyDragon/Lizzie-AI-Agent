@@ -1,0 +1,6 @@
+openai
+tweepy
+discord.py
+python-dotenv
+requests
+schedule

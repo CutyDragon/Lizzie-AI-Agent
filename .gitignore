@@ -1,0 +1,7 @@
+bot.log
+replied_mentions.txt
+/__pycache__/
+/aibot-env/
+.env
+/platforms/__pycache__/
+/utils/__pycache__/

@@ -13,7 +13,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 - **AI-Powered Financial Advice**: Delivers accurate and relevant financial advice tailored to user queries.
 - **Automated Tweet Posting**: Shares financial tips, market updates, and general advice at scheduled intervals.
 - **Engagement Tracking**: Keeps logs of replied mentions to avoid redundancy in responses.
-- **Customizable Templates**: Includes pre-designed templates for financial advice tweets, which can be personalized.
+- **Customizable Templates**: Includes pre-designed templates for the bot’s web pages, which can be personalized.
 - **Deployment Ready**: Supports deployment on platforms like Heroku using a `Procfile` for process management.
 
 ### Use Cases
@@ -45,7 +45,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 - **Utilities (`utils`)**:
    - Provides auxiliary functions for text processing and API requests.
 - **Templates**:
-   - Stores pre-written financial advice messages for customization.
+   - Contains pre-designed templates used for the bot’s web pages, ensuring a consistent and professional appearance.
 
 ---
 
@@ -95,8 +95,8 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 
 ### Modifying Templates
 - Navigate to the `templates` folder.
-- Edit or add new financial advice templates for tweets.
-- Ensure consistency in tone and formatting.
+- Edit or add new webpage templates for Cyria’s interface.
+- Ensure consistency in tone, design, and formatting.
 
 ### Extending Functionality
 - Introduce new scripts or functions in `utils` or other modules.
@@ -126,7 +126,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
   - Handling API responses and file management.
 
 ### `templates`
-- Contains pre-written financial advice and tips.
+- Contains pre-designed templates for Cyria’s web pages.
 - Easily customizable to align with specific themes or requirements.
 
 ---
@@ -192,5 +192,5 @@ A: Yes, by integrating sentiment analysis libraries within `content_generator.py
 ---
 
 ## 10. Conclusion
-Cyria is a powerful AI-driven financial advisor bot designed to enhance user engagement and provide actionable financial advice on Twitter. With its customizable templates, automated interactions, and intelligent content generation, Cyria is an invaluable tool for individuals and organizations aiming to make an impact in the financial space. By following this guide, you can fully utilize Cyria’s potential and even expand its capabilities to suit evolving needs.
+Cyria is a powerful AI-driven financial advisor bot designed to enhance user engagement and provide actionable financial advice on Twitter. With its customizable templates for web pages, automated interactions, and intelligent content generation, Cyria is an invaluable tool for individuals and organizations aiming to make an impact in the financial space. By following this guide, you can fully utilize Cyria’s potential and even expand its capabilities to suit evolving needs.
 

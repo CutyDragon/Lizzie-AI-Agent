@@ -13,7 +13,7 @@ def generate_content(prompt):
                 {"role": "system", "content": "You are a helpful assistant."},
                 {"role": "user", "content": prompt}
             ],
-            max_tokens=200  # Adjust based on desired output length
+            max_tokens=200
         )
         return response.choices[0].message['content'].strip()
     except Exception as e:

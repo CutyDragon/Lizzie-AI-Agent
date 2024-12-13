@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Logs</title>
+    <style>
+        /* Basic page styles */
+        body {
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('/static/images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        /* Header style */
+        header {
+            background-color: rgba(52, 57, 63, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 5px 0;
+            font-size: 1.8rem;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Footer style */
+        footer {
+            background-color: rgba(52, 57, 63, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Log container styles */
+        .log-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            height: 500px;
+        }
+
+        /* Log line styles */
+        .log-line {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: rgba(249, 249, 249, 0.1);
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .log-time {
+            font-weight: bold;
+            color: #ecf0f1;
+        }
+
+        .log-level {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #e67e22;
+        }
+
+        .log-content {
+            color: #bdc3c7;
+            margin-top: 5px;
+        }
+
+        /* Link container styles */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+        .profile-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ecf0f1;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: rgba(37, 41, 44, 0.8);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-link:hover {
+            background-color: rgb(27, 28, 29);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #ecf0f1;
+        }
+
+        /* Animation for log container */
+        .log-container {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Financial Advisor : Cyra</h1>
+        <p>Cyra is your kindly financial assist, please ask her and get the clear and helpful response from her.</p>
+    </header>
+
+    <!-- Profile Link -->
+    <div class="profile-container">
+        <a href="https://x.com/davidavifassion" target="_blank" class="profile-link">
+            <img src="/static/images/avatar.png" alt="Avatar" class="avatar">
+            <span>AI BOT : Cyra</span>
+        </a>
+    </div>
+
+    <!-- Log container -->
+    <div class="log-container" id="logContainer">
+        Loading logs...
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bot Logs. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function renderLogs(logData) {
+            const container = document.getElementById('logContainer');
+            const logLines = logData.split('\n').filter(line => line.trim() !== '');
+
+            container.innerHTML = ''; // Clear previous logs
+
+            logLines.forEach(line => {
+                const logParts = line.match(/^(.*?) - (.*?) - (.*)$/); // Match time, level, and message
+                if (logParts) {
+                    const time = logParts[1];
+                    const level = logParts[2];
+                    const content = logParts[3];
+
+                    // Create log elements
+                    const logDiv = document.createElement('div');
+                    logDiv.classList.add('log-line');
+
+                    const timeDiv = document.createElement('div');
+                    timeDiv.classList.add('log-time');
+                    timeDiv.innerText = time;
+
+                    const levelDiv = document.createElement('div');
+                    levelDiv.classList.add('log-level');
+                    levelDiv.innerText = level;
+
+                    const contentDiv = document.createElement('div');
+                    contentDiv.classList.add('log-content');
+                    contentDiv.innerText = content;
+
+                    // Append time, level, and content to log line
+                    logDiv.appendChild(timeDiv);
+                    logDiv.appendChild(levelDiv);
+                    logDiv.appendChild(contentDiv);
+
+                    // Append log line to container
+                    container.appendChild(logDiv);
+                }
+            });
+        }
+
+        // Fetch logs from the API
+        function fetchLogs() {
+            fetch('/api/log')
+                .then(response => response.text())
+                .then(data => {
+                    renderLogs(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching logs:', error);
+                    document.getElementById('logContainer').innerText = "Error loading logs.";
+                });
+        }
+
+        // Auto-update logs every 5 seconds
+        function startAutoUpdate(interval = 5000) {
+            fetchLogs(); // Fetch logs immediately
+            setInterval(fetchLogs, interval); // Fetch logs periodically
+        }
+
+        // Start auto-update on page load
+        window.onload = function () {
+            startAutoUpdate(5000); // Auto-update every 5 seconds
+        };
+    </script>
+</body>
+</html>

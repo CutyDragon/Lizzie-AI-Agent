@@ -4,3 +4,4 @@ discord.py
 python-dotenv
 requests
 schedule
+Flask

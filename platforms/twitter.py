@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from utils.logger import log_message
 from content_generator import generate_content
 import time
+from datetime import datetime, timedelta
 
 load_dotenv()
 
@@ -12,7 +13,7 @@ api_secret = os.getenv("TWITTER_API_SECRET")
 access_token = os.getenv("TWITTER_ACCESS_TOKEN")
 access_token_secret = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
 bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
-user_id = os.getenv("USER_ID")
+# user_id = os.getenv("USER_ID")
 
 REPLIED_IDS_FILE = "replied_mentions.txt"
 
@@ -23,6 +24,15 @@ client = tweepy.Client(
     access_token=access_token,
     access_token_secret=access_token_secret
 )
+# Get current time
+end_time = datetime.utcnow()
+# Get time 7 days ago
+start_time = end_time - timedelta(days=1)
+
+# Format dates in ISO 8601 format as required by Twitter API
+start_time = start_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+end_time = end_time.strftime('%Y-%m-%dT%H:%M:%SZ')
+print(f"Start time: {start_time}, End time: {end_time}")
 
 def load_replied_ids():
     if os.path.exists(REPLIED_IDS_FILE):
@@ -38,7 +48,15 @@ def reply_to_mentions():
     try:
         replied_ids = load_replied_ids()
         print(f"Here are the replied IDs: {replied_ids}")
-        mentions = client.get_users_mentions(id=user_id, tweet_fields=["text", "author_id"])
+        my_user = client.get_me()
+        user_id = my_user.data.id
+        mentions = client.get_users_mentions(
+            id=user_id, 
+            tweet_fields=["text", "author_id", "created_at", "public_metrics"],
+            start_time=start_time,
+            end_time=end_time
+        )
+        print(f"Here are the replied IDs: {mentions}")
 
         if mentions.data:
             for mention in mentions.data:
@@ -51,6 +69,7 @@ def reply_to_mentions():
                     continue
 
                 prompt = f"Reply to this tweet: '{mention_text}'"
+                print(f"Generating prompt for mention ID: {prompt}")
                 response_text = generate_content(prompt)
                 print(f"Generated reply for {mention_id} : {response_text}")
                 client.create_tweet(
@@ -69,9 +88,11 @@ def reply_to_mentions():
 
 def post_to_twitter(content):
     try:
+        # my_user = client.get_me()
+        # user_id = my_user.data.id
         response = client.create_tweet(text=content)
         log_message("SUCCESS", f"Successfully posted to Twitter\t: Twitter ID: {response.data['id']} : Twitter Content: {content}")
-        time.sleep(910)
+        time.sleep(60)
         reply_to_mentions()
     except tweepy.TweepyException as e:
         print(f"Error: {e}")

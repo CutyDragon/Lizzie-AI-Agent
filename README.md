@@ -1,13 +1,13 @@
-# Cyria: The Financial Advisor AI Bot Documentation
+# Lizzie: The Financial Advisor AI Bot Documentation
 
-Welcome to the comprehensive guide for Cyria, your AI-powered financial advisor bot! This document provides a detailed overview of the bot's functionality, setup, and use cases, along with instructions for installation and customization.
+Welcome to the comprehensive guide for Lizzie, your AI-powered financial advisor bot! This document provides a detailed overview of the bot's functionality, setup, and use cases, along with instructions for installation and customization.
 
 ---
 
 ## 1. Introduction
 
-### What Is Cyria?
-Cyria is an intelligent Twitter bot designed to provide financial advice and engage with users on topics related to finance. Leveraging advanced AI algorithms, Cyria can respond to user queries, share insightful financial tips, and maintain meaningful interactions on Twitter.
+### What Is Lizzie?
+Lizzie is an intelligent Twitter bot designed to provide financial advice and engage with users on topics related to finance. Leveraging advanced AI algorithms, Lizzie can respond to user queries, share insightful financial tips, and maintain meaningful interactions on Twitter.
 
 ### Key Features
 - **AI-Powered Financial Advice**: Delivers accurate and relevant financial advice tailored to user queries.
@@ -28,12 +28,12 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 
 ### Core Functionality
 1. **Listening for Mentions**:
-   - Cyria continuously monitors your Twitter account for mentions and financial-related queries.
+   - Lizzie continuously monitors your Twitter account for mentions and financial-related queries.
    - It ensures no duplicate responses by checking `replied_mentions.txt`.
 2. **Providing Financial Advice**:
    - The `content_generator.py` script uses AI to generate contextually accurate financial advice or information.
 3. **Posting Financial Tips**:
-   - Cyria regularly posts financial tips or market insights, either scheduled or dynamically generated.
+   - Lizzie regularly posts financial tips or market insights, either scheduled or dynamically generated.
 4. **Logging Activity**:
    - All interactions, including tweets and replies, are logged in `bot.log` for review and troubleshooting.
 
@@ -78,7 +78,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
    TWITTER_ACCESS_TOKEN_SECRET=your_access_token_secret
    ```
 
-4. **Run Cyria**:
+4. **Run Lizzie**:
    Execute the main script to start the bot:
    ```bash
    python main.py
@@ -91,11 +91,11 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 
 ---
 
-## 4. Customizing Cyria
+## 4. Customizing Lizzie
 
 ### Modifying Templates
 - Navigate to the `templates` folder.
-- Edit or add new webpage templates for Cyria’s interface.
+- Edit or add new webpage templates for Lizzie’s interface.
 - Ensure consistency in tone, design, and formatting.
 
 ### Extending Functionality
@@ -111,7 +111,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 ## 5. Code Overview
 
 ### `main.py`
-- Serves as the orchestrator for Cyria’s operations.
+- Serves as the orchestrator for Lizzie’s operations.
 - Key sections:
   - **Initialization**: Configures API connections and loads environment variables.
   - **Main Loop**: Monitors Twitter for mentions and triggers content generation or tweets.
@@ -126,7 +126,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
   - Handling API responses and file management.
 
 ### `templates`
-- Contains pre-designed templates for Cyria’s web pages.
+- Contains pre-designed templates for Lizzie’s web pages.
 - Easily customizable to align with specific themes or requirements.
 
 ---
@@ -134,7 +134,7 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 ## 6. Logging and Monitoring
 
 ### Interpreting `bot.log`
-- **Purpose**: Provides a detailed log of Cyria’s actions for debugging and performance tracking.
+- **Purpose**: Provides a detailed log of Lizzie’s actions for debugging and performance tracking.
 - **Format**:
   - Timestamps for each activity.
   - Details of mentions replied to and tweets posted.
@@ -169,28 +169,28 @@ Cyria is an intelligent Twitter bot designed to provide financial advice and eng
 
 ## 8. FAQ
 
-### Q: Can Cyria handle multiple Twitter accounts?
+### Q: Can Lizzie handle multiple Twitter accounts?
 A: Yes, but each account requires its own set of API credentials.
 
-### Q: How does Cyria ensure compliance with Twitter’s policies?
-A: Cyria adheres to Twitter’s automation guidelines, avoiding spam and focusing on meaningful interactions.
+### Q: How does Lizzie ensure compliance with Twitter’s policies?
+A: Lizzie adheres to Twitter’s automation guidelines, avoiding spam and focusing on meaningful interactions.
 
-### Q: Can Cyria schedule tweets?
+### Q: Can Lizzie schedule tweets?
 A: Absolutely. Incorporate scheduling libraries like `schedule` into `main.py`.
 
-### Q: Does Cyria support sentiment analysis?
+### Q: Does Lizzie support sentiment analysis?
 A: Yes, by integrating sentiment analysis libraries within `content_generator.py`.
 
 ---
 
 ## 9. Future Enhancements
 - **Advanced AI Models**: Use more sophisticated models for nuanced financial advice.
-- **Interactive Dashboards**: Provide a web interface for monitoring and controlling Cyria’s activity.
+- **Interactive Dashboards**: Provide a web interface for monitoring and controlling Lizzie’s activity.
 - **Multilingual Support**: Expand to deliver financial advice in various languages.
 - **Real-Time Notifications**: Add live alerts for critical financial updates.
 
 ---
 
 ## 10. Conclusion
-Cyria is a powerful AI-driven financial advisor bot designed to enhance user engagement and provide actionable financial advice on Twitter. With its customizable templates for web pages, automated interactions, and intelligent content generation, Cyria is an invaluable tool for individuals and organizations aiming to make an impact in the financial space. By following this guide, you can fully utilize Cyria’s potential and even expand its capabilities to suit evolving needs.
+Lizzie is a powerful AI-driven financial advisor bot designed to enhance user engagement and provide actionable financial advice on Twitter. With its customizable templates for web pages, automated interactions, and intelligent content generation, Lizzie is an invaluable tool for individuals and organizations aiming to make an impact in the financial space. By following this guide, you can fully utilize Lizzie’s potential and even expand its capabilities to suit evolving needs.
 

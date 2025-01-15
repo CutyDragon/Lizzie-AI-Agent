@@ -1,7 +1,6 @@
-bot.log
-replied_mentions.txt
 /__pycache__/
-/aibot-env/
+/aibot/
 .env
-/platforms/__pycache__/
-/utils/__pycache__/
+/bot/__pycache__/
+/bot/platforms/__pycache__/
+/bot/utils/__pycache__/

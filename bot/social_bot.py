@@ -104,19 +104,18 @@ class SocialBot:
             mentions = self.twitter_client.get_mentions()
             print(f"mentions: {mentions}")
             if not mentions:
+                print("No mentions found.")
                 return
-
-
 
             for mention in mentions:
                 if mention.id not in self.replied_tweets:
+                    print(f"mention.id: {mention.id}")
+                    print(f"mention.text: {mention.text}")
                     reply_content = self.openai_client.generate_reply(mention.text)
+                    print(f"reply_content: {reply_content}")
                     self.twitter_client.reply_to_tweet(mention.id, reply_content)
-                    
                     self.replied_tweets.append(mention.id)
                     self.save_reply_tracker()
-                    
-                    # Wait for 3 seconds before next reply
                     time.sleep(3)
 
         except Exception as e:

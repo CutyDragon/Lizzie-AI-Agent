@@ -34,17 +34,14 @@ class OpenAIClient:
                 max_tokens=1000
             )
             
-            # Split the response into 6 sentences and clean them
             content = response.choices[0].message.content
             sentences = [s.strip() for s in content.split('\n') if s.strip()]
-            print(sentences)
+            print(f"generate_daily_tweets", sentences)
             
 
-            # Ensure we have exactly 6 sentences
             if len(sentences) != 6:
                 raise ValueError("OpenAI did not generate exactly 6 sentences")
             
-            # Log successful generation
             extra = {
                 'tweet_id': 'N/A',
                 'type': 'info',
@@ -83,12 +80,11 @@ class OpenAIClient:
                     {"role": "user", "content": f"Reply professionally to this comment: {comment_text}"}
                 ],
                 temperature=0.7,
-                max_tokens=200
+                max_tokens=250
             )
             
             reply_content = response.choices[0].message.content.strip()
-            
-            # Verify reply length
+            print(f"generate_reply", reply_content)
             if len(reply_content) > 280:
                 reply_content = reply_content[:277] + "..."
             
@@ -113,7 +109,7 @@ class OpenAIClient:
             return "We apologize, but we're unable to process your request at this time. Please try again later."
 
     def validate_content(self, content):
-        """Utility method to validate content meets requirements"""
+        print("validate_content is called.")
         if not content:
             return False
         if len(content) > 280:

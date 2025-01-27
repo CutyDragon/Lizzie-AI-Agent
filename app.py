@@ -9,12 +9,15 @@ from bot.utils.logger import server_logger
 import os
 
 app = Flask(__name__)
+
 CORS(app, resources={
     r"/api/*": {
         "origins": "*",
         "methods": ["GET", "POST", "OPTIONS"]
     }
 })
+
+
 bot = SocialBot()
 
 def run_async(coro):
@@ -39,13 +42,14 @@ def schedule_tasks():
         schedule.run_pending()
         time.sleep(60)
 
-@app.route('/api/logs')
+@app.route("/api/logs")
 def get_logs():
+    print("get_logs is called.")
     try:
-        print("request is received.")
         with open('logs/bot.log', 'r') as f:
             logs = f.readlines()
         
+        print("request is received.")
         filtered_logs = [log for log in logs if "N/A" not in log]
         last_10_logs = filtered_logs[-10:]
         
@@ -67,5 +71,5 @@ if __name__ == '__main__':
     # asyncio.run(bot.telegram_client.start())
     
     server_logger.info("Server started")
-    debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
-    app.run(debug=debug_mode, host='0.0.0.0', port=5000)
+    # debug_mode = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    app.run(debug=False, host='0.0.0.0', port=5000)

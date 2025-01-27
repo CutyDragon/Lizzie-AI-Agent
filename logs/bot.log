@@ -132,3 +132,63 @@ Too Many Requests|N/A
 2025-01-16 00:18:16,179|INFO|N/A|info|Generated daily contents|N/A
 2025-01-16 00:30:08,344|INFO|N/A|info|Generated 6 new financial insights|N/A
 2025-01-16 00:30:08,345|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 05:35:29,856|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 05:35:29,856|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 06:24:40,072|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 06:24:40,073|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 06:37:44,967|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 06:37:44,969|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 06:58:10,537|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 06:58:10,538|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 07:08:45,194|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 07:08:45,195|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 07:13:45,400|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 07:13:45,402|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 07:26:19,818|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 07:26:19,821|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 07:57:04,850|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 07:57:04,852|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 08:57:05,181|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 09:00:05,823|INFO|N/A|info|Posting scheduled content index 0: 1. Diversification is key in investing; historical...|N/A
+2025-01-26 09:00:06,007|INFO|1883439759315575251|post|1. Diversification is key in investing; historically, a portfolio split 60% stocks and 40% bonds has yielded an average annual return of 8% over the past 90 years. #Investing #Diversification|https://twitter.com/user/status/1883439759315575251
+2025-01-26 09:57:06,248|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 10:57:06,564|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 11:30:06,635|INFO|N/A|info|Posting scheduled content index 1: 2. The S&P 500 has seen an average annual return o...|N/A
+2025-01-26 11:30:06,909|INFO|1883477511839043623|post|2. The S&P 500 has seen an average annual return of around 10% over the long term, showcasing the power of staying invested in the market through ups and downs. #StockMarket #SP500|https://twitter.com/user/status/1883477511839043623
+2025-01-26 11:48:38,694|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 11:48:38,695|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 12:00:37,897|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 12:00:37,898|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 13:00:38,243|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 13:19:38,312|INFO|N/A|info|Posting scheduled content index 2: 3. Compound interest can significantly boost your ...|N/A
+2025-01-26 13:19:38,580|INFO|1883505075437670675|post|3. Compound interest can significantly boost your savings over time; for example, investing $1,000 annually at a 7% interest rate can grow to over $22,000 in 20 years. #PowerOfCompounding|https://twitter.com/user/status/1883505075437670675
+2025-01-26 14:00:38,796|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 14:02:38,806|INFO|N/A|info|Posting scheduled content index 3: 4. Market volatility is a norm, with the S&P 500 e...|N/A
+2025-01-26 14:02:38,998|INFO|1883515898448994349|post|4. Market volatility is a norm, with the S&P 500 experiencing an average intra-year decline of 14% despite ending the year with positive returns 75% of the time. #StayCalmInvestOn|https://twitter.com/user/status/1883515898448994349
+2025-01-26 15:00:39,438|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 16:00:39,803|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 17:00:40,065|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 18:00:40,204|INFO|N/A|info|Posting scheduled content index 4: 5. Understanding financial ratios is crucial for a...|N/A
+2025-01-26 18:00:40,541|INFO|1883575799468740659|post|5. Understanding financial ratios is crucial for assessing a company's health; a high current ratio (current assets/current liabilities) indicates strong liquidity and ability to cover short-term obligations. #FinancialHealthCheck|https://twitter.com/user/status/1883575799468740659
+2025-01-26 18:00:40,601|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 19:00:40,901|ERROR|N/A|error|Error getting mentions: 400 Bad Request
+The `expansions` query parameter value [referenced_tweets] is not one of [author_id,referenced_tweets.id,referenced_tweets.id.author_id,entities.mentions.username,entities.note.mentions.username,attachments.poll_ids,attachments.media_keys,attachments.media_source_tweet,in_reply_to_user_id,geo.place_id,edit_history_tweet_ids,article.cover_media,article.media_entities]|N/A
+2025-01-26 20:00:36,755|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 20:00:36,757|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 20:02:18,986|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 20:02:18,988|INFO|N/A|info|Generated daily contents|N/A
+2025-01-26 20:12:28,108|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-26 20:12:28,110|INFO|N/A|info|Generated daily contents|N/A
+2025-01-27 00:57:12,795|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-27 00:57:12,797|INFO|N/A|info|Generated daily contents|N/A
+2025-01-27 00:58:02,044|INFO|N/A|info|Generated 6 new financial insights|N/A
+2025-01-27 00:58:02,044|INFO|N/A|info|Generated daily contents|N/A

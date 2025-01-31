@@ -3,7 +3,7 @@
 Welcome to the comprehensive guide for Lizzie, your AI-powered financial advisor bot! This document provides a detailed overview of the bot's functionality, setup, and use cases, along with instructions for installation and customization.
 
 ---
-
+Social twitter link : https://x.com/lizzie
 ## 1. Introduction
 
 ### What Is Lizzie?
